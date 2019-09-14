@@ -18,3 +18,5 @@ you also can show all memery information
 ```
 while sleep 2; do adb shell dumpsys meminfo com.rn59 | grep -E 'Unknown|TOTAL'; done
 ```
+
+![mem_unknow_leak](./mem_unknow_leak.png)
