@@ -1,21 +1,20 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-export default class Test1 extends React.Component {
+export default class Test3 extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{ fontSize: 50 }}>This is Test1</Text>
+        <Text style={{ fontSize: 50 }}>This is Test3</Text>
         <TouchableOpacity onPress={this._onPressButton}>
-          <Text style={{ fontSize: 50 }}>go Test2</Text>
+          <Text style={{ fontSize: 50 }}>go Test1</Text>
         </TouchableOpacity>
       </View>
     );
   }
   _onPressButton = () => {
     __DEV__ && console.log('_onPressButton', this.props.navigation);
-    this.props.navigation.navigate('Test2');
-    // msg.emit('goNext', 'test2');
+    this.props.navigation.navigate('Test1');
   };
 }
 

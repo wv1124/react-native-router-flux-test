@@ -1,24 +1,20 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { Actions } from 'react-native-router-flux';
-export default class Appointment extends React.PureComponent {
+export default class Test3 extends React.Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={{ fontSize: 50 }}>This is Test2</Text>
         <TouchableOpacity onPress={this._onPressButton}>
-          <Text style={{ fontSize: 50 }}>goto Test1</Text>
+          <Text style={{ fontSize: 50 }}>goto Test3</Text>
         </TouchableOpacity>
       </View>
     );
   }
   _onPressButton = () => {
-    if (this.props.onChange) {
-      this.props.onChange('test1');
-    } else {
-      // msg.emit('goNext', 'test1');
-      Actions.Test1();
-    }
+    __DEV__ && console.log('_onPressButton', this.props.navigation.navigate);
+    this.props.navigation.push('Test3');
+    // msg.emit('goNext', 'test3');
   };
 }
 

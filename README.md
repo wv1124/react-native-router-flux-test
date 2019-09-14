@@ -20,3 +20,12 @@ while sleep 2; do adb shell dumpsys meminfo com.rn59 | grep -E 'Unknown|TOTAL'; 
 ```
 
 ![mem_unknow_leak](./mem_unknow_leak.png)
+
+## react-navgation
+
+```
+yarn
+react-native link react-native-reanimated
+react-native link react-native-gesture-handler
+react-native link react-native-screens
+```
