@@ -11,8 +11,6 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Test1 from './Test1';
 import Test2 from './Test2';
-import Test3 from './Test3';
-
 
 const AppNavigator = createAppContainer(
   createStackNavigator(
@@ -21,8 +19,7 @@ const AppNavigator = createAppContainer(
         path: 'Test1',
         screen: Test1
       },
-      Test2: { path: 'Test2', screen: Test2 },
-      Test3: { path: 'Test3', screen: Test3 }
+      Test2: { path: 'Test2', screen: Test2 }
     },
     {
       headerMode: 'none',

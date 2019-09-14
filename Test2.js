@@ -13,7 +13,7 @@ export default class Test3 extends React.Component {
   }
   _onPressButton = () => {
     __DEV__ && console.log('_onPressButton', this.props.navigation.navigate);
-    this.props.navigation.push('Test3');
+    this.props.navigation.push('Test1');
     // msg.emit('goNext', 'test3');
   };
 }
