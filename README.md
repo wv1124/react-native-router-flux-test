@@ -21,11 +21,25 @@ while sleep 2; do adb shell dumpsys meminfo com.rn59 | grep -E 'Unknown|TOTAL'; 
 
 ![mem_unknow_leak](./mem_unknow_leak.png)
 
-## react-navgation
+## react-navgation Memory leak test
 
 ```
-yarn
-react-native link react-native-reanimated
-react-native link react-native-gesture-handler
-react-native link react-native-screens
+git chcekout react-navigation-test
+yarn install
+react-native run-android
+
+```
+
+```
+while sleep 2; do adb shell dumpsys meminfo com.rn59 | grep Unknown; done
+```
+
+repeat Test1 and Test2 abort 200 times,
+
+The Unknown memory raise from 23714 to
+
+```
+Unknown    26430    26428        0        0
+...
+Unknown    31562    31560        0        0
 ```
