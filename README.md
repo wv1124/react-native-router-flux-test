@@ -27,7 +27,6 @@ while sleep 2; do adb shell dumpsys meminfo com.rn59 | grep -E 'Unknown|TOTAL'; 
 git chcekout react-navigation-test
 yarn install
 react-native run-android
-
 ```
 
 ```
