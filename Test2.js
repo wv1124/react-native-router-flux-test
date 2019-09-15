@@ -17,7 +17,7 @@ export default class Appointment extends React.PureComponent {
       this.props.onChange('test1');
     } else {
       // msg.emit('goNext', 'test1');
-      Actions.Test1();
+      Actions.pop();
     }
   };
 }
