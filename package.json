@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "cd ./android && ./gradlew app:assembleDebug && ./gradlew installDebug",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.10",
-    "react-native-router-flux": "^4.0.6"
+    "react-native-navigation": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

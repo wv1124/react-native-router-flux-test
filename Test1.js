@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import { Navigation } from 'react-native-navigation';
 
-export default class Appointment extends React.PureComponent {
+export default class Test1 extends React.PureComponent {
   render() {
     return (
       <View style={styles.container}>
@@ -14,12 +14,22 @@ export default class Appointment extends React.PureComponent {
     );
   }
   _onPressButton = () => {
-    if (this.props.onChange) {
-      this.props.onChange('test2');
-    } else {
-      // msg.emit('goNext', 'test2');
-      Actions.Test2();
-    }
+    __DEV__ && console.log('_onPressButton', this.props.componentId);
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: 'Test2',
+        passProps: {
+          text: 'Pushed screen'
+        },
+        options: {
+          topBar: {
+            title: {
+              text: 'Test2'
+            }
+          }
+        }
+      }
+    });
   };
 }
 
