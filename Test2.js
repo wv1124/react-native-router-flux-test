@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { Actions } from 'react-native-router-flux';
 export default class Appointment extends React.PureComponent {
   render() {
     return (
@@ -15,9 +14,6 @@ export default class Appointment extends React.PureComponent {
   _onPressButton = () => {
     if (this.props.onChange) {
       this.props.onChange('test1');
-    } else {
-      // msg.emit('goNext', 'test1');
-      Actions.Test1();
     }
   };
 }

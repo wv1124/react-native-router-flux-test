@@ -8,7 +8,6 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import { Router, Stack, Scene, Actions } from 'react-native-router-flux';
 import Test1 from './Test1';
 import Test2 from './Test2';
 
@@ -26,7 +25,6 @@ export default class App extends Component {
 
   render() {
     return this.renderSimple();
-    // return this.renderRouter();
   }
 
   renderSimple = () => {
@@ -43,17 +41,6 @@ export default class App extends Component {
           <Test2 onChange={this.onChange} />
         )}
       </View>
-    );
-  };
-
-  renderRouter = () => {
-    return (
-      <Router>
-        <Stack key="root">
-          <Scene key="Test1" component={Test1} title="Test1" />
-          <Scene key="Test2" component={Test2} title="Test2" />
-        </Stack>
-      </Router>
     );
   };
 
