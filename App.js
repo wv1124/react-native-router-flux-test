@@ -24,17 +24,9 @@ export default class App extends Component {
     router: 'test1'
   };
 
-  componentDidMount() {
-    // msg.on('goNext', this._goNext);
-  }
-
-  componentWillUnmount() {
-    // msg.off('goNext', this._goNext);
-  }
-
   render() {
-    // return this.renderSimple();
-    return this.renderRouter();
+    return this.renderSimple();
+    // return this.renderRouter();
   }
 
   renderSimple = () => {
