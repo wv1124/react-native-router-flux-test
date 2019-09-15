@@ -12,7 +12,8 @@ export default class Test2 extends React.Component {
     );
   }
   _onPressButton = () => {
-    this.props.navigation.navigate('Test1');
+    // this.props.navigation.pop('Test1');
+    this.props.navigation.goBack()
     // msg.emit('goNext', 'test3');
   };
 }
